@@ -1,0 +1,74 @@
+{
+  "idToTestNameHash": {
+    "DeTe1": "Debug Tests isValidCompanyUsername - correctly checks if an employee has a valid username",
+    "MoTe1": "Modify Tests swapAllCases - swaps all letter cases in string using regex properly and toUpper/LowerCase once each",
+    "FrScTe1": "From Scratch Tests helloWorldRegex - if the string contains \"hello world\" regardless of case it returns true",
+    "FrScTe2": "From Scratch Tests hasAVowel - if the string contains a vowel regardless of case it returns true",
+    "FrScTe3": "From Scratch Tests hasCatsOrDogs - if the string contains \"cats\" or \"dogs\" regardless of case it returns true",
+    "FrScTe4": "From Scratch Tests hasVowelStart - if the string starts with a vowel regardless of case it returns true",
+    "FrScTe5": "From Scratch Tests hasPunctuationEnd - if the string ends with a . or ? or ! it returns true",
+    "FrScTe6": "From Scratch Tests hasNothingOrDigits - if the string contains nothing or only digits it returns true",
+    "FrScTe7": "From Scratch Tests hasNoFlippers - if the string doesn't have: B, C, c, D, E, H, I, K, O, o, X, x, l, it returns true",
+    "FrScTe8": "From Scratch Tests isValidEmail - if the string is a valid email it returns true",
+    "FrScTe9": "From Scratch Tests isValidPhoneNumber - if the string is a valid phone number it returns true",
+    "FrScTe10": "From Scratch Tests matchAllNumbers - returns an array of all the numbers in the string as strings",
+    "FrScTe11": "From Scratch Tests matchAllNumbersAsNumbers - returns an array of all the numbers in the string as numbers",
+    "FrScTe12": "From Scratch Tests matchAllWords - returns an array of all the words in the string",
+    "FrScTe13": "From Scratch Tests replaceAllNumbers - replaces all the numbers in the string with \"???\"",
+    "FrScTe14": "From Scratch Tests fixFileName - replaces all the whitespace in the string with underscores",
+    "FrScTe15": "From Scratch Tests nameRedacter - replaces all the words in the string that are 2 or more characters long and all uppercase with \"REDACTED\"",
+    "FrScTe16": "From Scratch Tests camelCaseToSnakeCase - converts a camelCase string to snake_case"
+  },
+  "testNameToIdHash": {
+    "Debug Tests isValidCompanyUsername - correctly checks if an employee has a valid username": "DeTe1",
+    "Modify Tests swapAllCases - swaps all letter cases in string using regex properly and toUpper/LowerCase once each": "MoTe1",
+    "From Scratch Tests helloWorldRegex - if the string contains \"hello world\" regardless of case it returns true": "FrScTe1",
+    "From Scratch Tests hasAVowel - if the string contains a vowel regardless of case it returns true": "FrScTe2",
+    "From Scratch Tests hasCatsOrDogs - if the string contains \"cats\" or \"dogs\" regardless of case it returns true": "FrScTe3",
+    "From Scratch Tests hasVowelStart - if the string starts with a vowel regardless of case it returns true": "FrScTe4",
+    "From Scratch Tests hasPunctuationEnd - if the string ends with a . or ? or ! it returns true": "FrScTe5",
+    "From Scratch Tests hasNothingOrDigits - if the string contains nothing or only digits it returns true": "FrScTe6",
+    "From Scratch Tests hasNoFlippers - if the string doesn't have: B, C, c, D, E, H, I, K, O, o, X, x, l, it returns true": "FrScTe7",
+    "From Scratch Tests isValidEmail - if the string is a valid email it returns true": "FrScTe8",
+    "From Scratch Tests isValidPhoneNumber - if the string is a valid phone number it returns true": "FrScTe9",
+    "From Scratch Tests matchAllNumbers - returns an array of all the numbers in the string as strings": "FrScTe10",
+    "From Scratch Tests matchAllNumbersAsNumbers - returns an array of all the numbers in the string as numbers": "FrScTe11",
+    "From Scratch Tests matchAllWords - returns an array of all the words in the string": "FrScTe12",
+    "From Scratch Tests replaceAllNumbers - replaces all the numbers in the string with \"???\"": "FrScTe13",
+    "From Scratch Tests fixFileName - replaces all the whitespace in the string with underscores": "FrScTe14",
+    "From Scratch Tests nameRedacter - replaces all the words in the string that are 2 or more characters long and all uppercase with \"REDACTED\"": "FrScTe15",
+    "From Scratch Tests camelCaseToSnakeCase - converts a camelCase string to snake_case": "FrScTe16"
+  },
+  "testScores": {
+    "Debug Tests": {
+      "DeTe1": 0
+    },
+    "Modify Tests": {
+      "MoTe1": 0
+    },
+    "From Scratch Tests": {
+      "FrScTe1": 0,
+      "FrScTe2": 0,
+      "FrScTe3": 0,
+      "FrScTe4": 0,
+      "FrScTe5": 0,
+      "FrScTe6": 0,
+      "FrScTe7": 0,
+      "FrScTe8": 0,
+      "FrScTe9": 0,
+      "FrScTe10": 0,
+      "FrScTe11": 0,
+      "FrScTe12": 0,
+      "FrScTe13": 0,
+      "FrScTe14": 0,
+      "FrScTe15": 0,
+      "FrScTe16": 0
+    }
+  },
+  "humanReadable": {
+    "Debug Tests": "0/1",
+    "finalTestScore": "FINAL SCORE: 0/18",
+    "Modify Tests": "0/1",
+    "From Scratch Tests": "0/16"
+  }
+}
