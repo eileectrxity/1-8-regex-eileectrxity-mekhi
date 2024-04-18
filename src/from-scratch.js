@@ -4,12 +4,19 @@ const helloWorldRegex = (str) => {
 
 // tests
 
-const testStr1 = "hello WORlD";
-console.log(helloWorldRegex(testStr1));
+// const testStr1 = "hello WORlD";
+// console.log(helloWorldRegex(testStr1));
 
 const hasAVowel = (str) => {};
 
-const hasCatsOrDogs = (str) => {};
+const hasCatsOrDogs = (str) => {
+  return /(cat|dog)/.test(str);
+};
+
+// tests
+
+const testStr3 = "dog and cat";
+console.log(hasCatsOrDogs(testStr3));
 
 const hasVowelStart = (str) => {};
 
