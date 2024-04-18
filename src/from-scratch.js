@@ -19,7 +19,19 @@ const hasCatsOrDogs = (str) => {
 
 const hasVowelStart = (str) => {};
 
-const hasPunctuationEnd = (str) => {};
+//Question 5
+const hasPunctuationEnd = (str) => {
+  return /[.!?]$/.test(str);
+};
+
+// tests
+console.log(hasPunctuationEnd("a.")); // true
+console.log(hasPunctuationEnd("a!")); // true
+console.log(hasPunctuationEnd("a?")); // true
+console.log(hasPunctuationEnd("a")); // false
+console.log(hasPunctuationEnd("a!a")); // false
+console.log(hasPunctuationEnd("a?b")); // false
+console.log(hasPunctuationEnd("")); // false
 
 const hasNothingOrDigits = (str) => {};
 
