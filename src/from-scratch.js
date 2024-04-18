@@ -1,22 +1,21 @@
+//Lesson 1-8 Assignment: RegEx by Mekhi[odd q's] + Eileen[even q's]
+
+//for question s1-9, we'll use regex literals and the .test method
+
+//Question 1:
 const helloWorldRegex = (str) => {
   return /hello world/i.test(str);
 };
 
-// tests
+//Question 2: hasAVowel takes in a string and should return true if the given string has at least 1 vowel present, and false otherwise. the case does not matter
+const hasAVowel = (str) => {
+  return /[aeiou]/i.test(str);
+};
 
-// const testStr1 = "hello WORlD";
-// console.log(helloWorldRegex(testStr1));
-
-const hasAVowel = (str) => {};
-
+//Question 3:
 const hasCatsOrDogs = (str) => {
   return /(cat|dog)/.test(str);
 };
-
-// tests
-
-const testStr3 = "dog and cat";
-console.log(hasCatsOrDogs(testStr3));
 
 const hasVowelStart = (str) => {};
 
