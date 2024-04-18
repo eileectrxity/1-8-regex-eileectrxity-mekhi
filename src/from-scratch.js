@@ -7,17 +7,42 @@ const helloWorldRegex = (str) => {
   return /hello world/i.test(str);
 };
 
+// //printing q1 test to the console below
+// const testStr1 = "hello WORlD";
+// console.log(helloWorldRegex(testStr1));
+
 //Question 2: hasAVowel takes in a string and should return true if the given string has at least 1 vowel present, and false otherwise. the case does not matter
 const hasAVowel = (str) => {
   return /[aeiou]/i.test(str);
 };
+
+// //printing q2 test to the console below
+// console.log(hasAVowel("a")); //true
+// console.log(hasAVowel("AHHHHHH!")); //true
+// console.log(hasAVowel("HEY")); //true
+// console.log(hasAVowel("wow")); //true
+// console.log(hasAVowel("")); //false
+// console.log(hasAVowel("xzy")); //false
+// console.log(hasAVowel("y")); //false
 
 //Question 3:
 const hasCatsOrDogs = (str) => {
   return /(cat|dog)/.test(str);
 };
 
-const hasVowelStart = (str) => {};
+//Question 4: hasVowelStart takes in a string and should return true if the string starts with a vowel, and false otherwise. the case doesn't matter
+const hasVowelStart = (str) => {
+  return /^[aeiou]/i.test(str);
+};
+
+// //printing q4 test to the console below
+// console.log(hasVowelStart("a")); //true
+// console.log(hasVowelStart("A")); //true
+// console.log(hasVowelStart("ab")); //true
+// console.log(hasVowelStart("Ab")); //true
+// console.log(hasVowelStart("ba")); //false
+// console.log(hasVowelStart("Ba")); //false
+// console.log(hasVowelStart("")); //false
 
 const hasPunctuationEnd = (str) => {};
 
