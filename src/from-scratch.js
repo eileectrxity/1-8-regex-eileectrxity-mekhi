@@ -1,8 +1,8 @@
 //Lesson 1-8 Assignment: RegEx by Mekhi[odd q's] + Eileen[even q's]
 
-//for question s1-9, we'll use regex literals and the .test method
+//for questions 1-9, we'll use regex literals and the .test method
 
-//Question 1:
+//QUESTION 1:
 const helloWorldRegex = (str) => {
   return /hello world/i.test(str);
 };
@@ -11,7 +11,7 @@ const helloWorldRegex = (str) => {
 // const testStr1 = "hello WORlD";
 // console.log(helloWorldRegex(testStr1));
 
-//Question 2: hasAVowel takes in a string and should return true if the given string has at least 1 vowel present, and false otherwise. the case does not matter
+//QUESTION 2: hasAVowel takes in a string and should return true if the given string has at least 1 vowel present, and false otherwise. the case does not matter
 const hasAVowel = (str) => {
   return /[aeiou]/i.test(str);
 };
@@ -25,12 +25,20 @@ const hasAVowel = (str) => {
 // console.log(hasAVowel("xzy")); //false
 // console.log(hasAVowel("y")); //false
 
-//Question 3:
+//QUESTION 3:
 const hasCatsOrDogs = (str) => {
   return /(cat|dog)/.test(str);
 };
 
-//Question 4: hasVowelStart takes in a string and should return true if the string starts with a vowel, and false otherwise. the case doesn't matter
+// //printing q3 test to the console below
+// console.log(hasCatsOrDogs("Gosh, I love having so many cats!")); //true
+// console.log(hasCatsOrDogs("Wow, I have a lot of dogs!")); //true
+// console.log(hasCatsOrDogs("Cats rule!")); //true
+// console.log(hasCatsOrDogs("I do not care for that dog.")); //false
+// console.log(hasCatsOrDogs("Cat? No way.")); //false
+// console.log(hasCatsOrDogs("Cat? No, but I have a ton of dogs.")); //true
+
+//QUESTION 4: hasVowelStart takes in a string and should return true if the string starts with a vowel, and false otherwise. the case doesn't matter
 const hasVowelStart = (str) => {
   return /^[aeiou]/i.test(str);
 };
@@ -44,21 +52,31 @@ const hasVowelStart = (str) => {
 // console.log(hasVowelStart("Ba")); //false
 // console.log(hasVowelStart("")); //false
 
-//Question 5
+//QUESTION 5:
 const hasPunctuationEnd = (str) => {
   return /[.!?]$/.test(str);
 };
 
-// tests
-console.log(hasPunctuationEnd("a.")); // true
-console.log(hasPunctuationEnd("a!")); // true
-console.log(hasPunctuationEnd("a?")); // true
-console.log(hasPunctuationEnd("a")); // false
-console.log(hasPunctuationEnd("a!a")); // false
-console.log(hasPunctuationEnd("a?b")); // false
-console.log(hasPunctuationEnd("")); // false
+// // printing q5 test to the console below
+// console.log(hasPunctuationEnd("a.")); // true
+// console.log(hasPunctuationEnd("a!")); // true
+// console.log(hasPunctuationEnd("a?")); // true
+// console.log(hasPunctuationEnd("a")); // false
+// console.log(hasPunctuationEnd("a!a")); // false
+// console.log(hasPunctuationEnd("a?b")); // false
+// console.log(hasPunctuationEnd("")); // false
 
-const hasNothingOrDigits = (str) => {};
+//QUESTION 6: hasNothingOrDigits takes in a string and should return true if the string is either empty or only contains digits, and false otherwise. hint: when checking the entire string, it's useful to add starting and ending anchors
+const hasNothingOrDigits = (str) => {
+  return /^$|^\d+$/.test(str);
+};
+
+// //printing q6 test to the console below
+// console.log(hasNothingOrDigits("")); //true
+// console.log(hasNothingOrDigits("123")); //true
+// console.log(hasNothingOrDigits("abc")); //false
+// console.log(hasNothingOrDigits("123abc")); //false
+// console.log(hasNothingOrDigits("abc123")); //false
 
 const hasNoFlippers = (str) => {};
 
