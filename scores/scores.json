@@ -62,13 +62,13 @@
       "FrScTe13": 1,
       "FrScTe14": 1,
       "FrScTe15": 1,
-      "FrScTe16": 0
+      "FrScTe16": 1
     }
   },
   "humanReadable": {
     "Debug Tests": "1/1",
     "finalTestScore": "FINAL SCORE: 16/18",
     "Modify Tests": "0/1",
-    "From Scratch Tests": "15/16"
+    "From Scratch Tests": "16/16"
   }
 }
