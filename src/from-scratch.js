@@ -27,8 +27,16 @@ const hasAVowel = (str) => {
 
 //Question 3:
 const hasCatsOrDogs = (str) => {
-  return /(cat|dog)/.test(str);
+  return /(cats|dogs)/i.test(str);
 };
+
+// tests
+// console.log(hasCatsOrDogs("Gosh, I love having so many cats!")); // true
+// console.log(hasCatsOrDogs("Wow, I have a lot of dogs!")); // true
+// console.log(hasCatsOrDogs("Cats rule!")); // true
+// console.log(hasCatsOrDogs("I do not care for that dog.")); // false
+// console.log(hasCatsOrDogs("Cat? No way.")); // false
+// console.log(hasCatsOrDogs("Cat? No, but I have a ton of dogs.")); // true
 
 //Question 4: hasVowelStart takes in a string and should return true if the string starts with a vowel, and false otherwise. the case doesn't matter
 const hasVowelStart = (str) => {
@@ -50,17 +58,32 @@ const hasPunctuationEnd = (str) => {
 };
 
 // tests
-console.log(hasPunctuationEnd("a.")); // true
-console.log(hasPunctuationEnd("a!")); // true
-console.log(hasPunctuationEnd("a?")); // true
-console.log(hasPunctuationEnd("a")); // false
-console.log(hasPunctuationEnd("a!a")); // false
-console.log(hasPunctuationEnd("a?b")); // false
-console.log(hasPunctuationEnd("")); // false
+// console.log(hasPunctuationEnd("a.")); // true
+// console.log(hasPunctuationEnd("a!")); // true
+// console.log(hasPunctuationEnd("a?")); // true
+// console.log(hasPunctuationEnd("a")); // false
+// console.log(hasPunctuationEnd("a!a")); // false
+// console.log(hasPunctuationEnd("a?b")); // false
+// console.log(hasPunctuationEnd("")); // false
 
 const hasNothingOrDigits = (str) => {};
 
-const hasNoFlippers = (str) => {};
+const hasNoFlippers = (str) => {
+  // return /^[^BCcDEHIKOoXxl]*$/.test(str); //have no clue why this works
+  return !/[BCcDEHIKOoXxl]/.test(str);
+};
+
+// tests
+// console.log(hasNoFlippers("Z")); // true
+// console.log(hasNoFlippers("Zabdabbq")); // true
+// console.log(hasNoFlippers("")); // true
+// console.log(hasNoFlippers("abd")); // true
+// console.log(hasNoFlippers("B")); // false
+// console.log(hasNoFlippers("BC")); // false
+// console.log(hasNoFlippers("oao")); // false
+// console.log(hasNoFlippers("abdefo")); // false
+
+// console.log(/^hi$/.test("yo hi yo"));
 
 const isValidEmail = (str) => {};
 
