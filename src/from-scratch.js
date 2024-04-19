@@ -1,6 +1,6 @@
 //Lesson 1-8 Assignment: RegEx by Mekhi[odd q's] + Eileen[even q's]
 
-//for questions 1-9, we'll use regex literals and the .test method
+//for question s1-9, we'll use regex literals and the .test method
 
 //QUESTION 1:
 const helloWorldRegex = (str) => {
@@ -27,16 +27,16 @@ const hasAVowel = (str) => {
 
 //QUESTION 3:
 const hasCatsOrDogs = (str) => {
-  return /(cats|dogs)/i.test(str);
+  return /(cat|dog)/.test(str);
 };
 
 // //printing q3 test to the console below
-// console.log(hasCatsOrDogs("Gosh, I love having so many cats!")); // true
-// console.log(hasCatsOrDogs("Wow, I have a lot of dogs!")); // true
-// console.log(hasCatsOrDogs("Cats rule!")); // true
-// console.log(hasCatsOrDogs("I do not care for that dog.")); // false
-// console.log(hasCatsOrDogs("Cat? No way.")); // false
-// console.log(hasCatsOrDogs("Cat? No, but I have a ton of dogs.")); // true
+// console.log(hasCatsOrDogs("Gosh, I love having so many cats!")); //true
+// console.log(hasCatsOrDogs("Wow, I have a lot of dogs!")); //true
+// console.log(hasCatsOrDogs("Cats rule!")); //true
+// console.log(hasCatsOrDogs("I do not care for that dog.")); //false
+// console.log(hasCatsOrDogs("Cat? No way.")); //false
+// console.log(hasCatsOrDogs("Cat? No, but I have a ton of dogs.")); //true
 
 //QUESTION 4: hasVowelStart takes in a string and should return true if the string starts with a vowel, and false otherwise. the case doesn't matter
 const hasVowelStart = (str) => {
@@ -78,7 +78,7 @@ const hasNothingOrDigits = (str) => {
 // console.log(hasNothingOrDigits("123abc")); //false
 // console.log(hasNothingOrDigits("abc123")); //false
 
-//QUESTION 7:
+//QUESTION 7: hasNoFlippers takes in a string and should return true if the string has NO "flippable" letters, and false otherwise. a "flippable" letter is one that could be flipped upside down but look identical, so B, C, c, D, E, H, I, K, O, o, X, x, l. Only these exact letters
 const hasNoFlippers = (str) => {
   // return /^[^BCcDEHIKOoXxl]*$/.test(str); //have no clue why this works
   return !/[BCcDEHIKOoXxl]/.test(str);
@@ -94,9 +94,35 @@ const hasNoFlippers = (str) => {
 // console.log(hasNoFlippers("oao")); // false
 // console.log(hasNoFlippers("abdefo")); // false
 
-const isValidEmail = (str) => {};
+//QUESTION 8: this question and the phone one are probably the most likely thing you'll turn to regex for: tricky validation. the way you do that is usually Googling around until you get something right. so, Google "regex email validation" and see what you get. try to make sense of it, and then try to implement it. if you're having trouble, try to break it down into smaller pieces. what does it mean to be a valid email? what are the rules? how can you check for those rules?
+const isValidEmail = (str) => {
+  return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(str);
+};
 
-const isValidPhoneNumber = (str) => {};
+// //printing q8 test to the console below
+// console.log(isValidEmail('a@b.co')); //true
+// console.log(isValidEmail('tom@gmail.com')); //true
+// console.log(isValidEmail('zo@marcy.org')); //true
+// console.log(isValidEmail('maya.b@marcy.org')); //true
+// console.log(isValidEmail('reuben_O@marcy.org')); //true
+// console.log(isValidEmail('gonzalo@marcy')); //false
+// console.log(isValidEmail('ben@marcy.')); //false
+// console.log(isValidEmail('carms%@marcy.org')); //false
+
+//QUESTION 9: same as above, but for phone numbers. again, Google it and see if you can make sense of what's suggested to you
+const isValidPhoneNumber = (str) => {
+  return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]+[0-9]{3}[-\s\.]+[0-9]{4}$/.test(str);
+};
+
+// //printing q9 test to the console below
+// console.log(isValidPhoneNumber('860-227-7890')); //true
+// console.log(isValidPhoneNumber('(860) 410-7890')); //true
+// console.log(isValidPhoneNumber('860 892 8010')); //true
+// console.log(isValidPhoneNumber('860.888.4872')); //true
+// console.log(isValidPhoneNumber('860-227-789')); //false
+// console.log(isValidPhoneNumber('860-227-78900')); //false
+// console.log(isValidPhoneNumber('8602277898')); //false
+// console.log(isValidPhoneNumber('ohmannotevenclosehere')); //false
 
 const matchAllNumbers = (str) => {};
 
