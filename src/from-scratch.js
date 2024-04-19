@@ -151,7 +151,19 @@ const matchAllNumbersAsNumbers = (str) => {
 // console.log(matchAllNumbersAsNumbers("There were 40 fire drills last year, and luckily 0 fires")); //[40, 0]
 // console.log(matchAllNumbersAsNumbers("I have 1 dog, 2 cats, and 4 bunnies. Oh wait, 8 bunnies.")); //[1, 2, 4, 8]
 
-const matchAllWords = (str) => {};
+//QUESTION 12: matchAllWords takes in a string and should return an array of all the words in the string (as strings). if there are no words, it should return an empty array. words should only have letters and ' in them, nothing else! do not include punctuation. this question is a little open ended right? so just check the tests specifically for what they test for. if you pass them all, you get the question right!
+const matchAllWords = (str) => {
+  return str.match(/[a-zA-Z]+(?:'\w+)?/g) || [];
+};
+
+// //printing q12 test to the console below
+// console.log(matchAllWords("Hello world!")); //['Hello', 'world']
+// console.log(matchAllWords("It looks like...rain today?")); //['It', 'looks', 'like', 'rain', 'today']
+// console.log(matchAllWords("")); //[]
+// console.log(matchAllWords("I don't think I'm going, but you can!")); //["I", "don't", "think", "I'm", "going", "but", "you", "can"]
+// console.log(matchAllWords("wow_this_screen_name_is_long")); //['wow', 'this', 'screen', 'name', 'is', 'long']
+// console.log(matchAllWords("I have 3 dogs, 2 cats, and 10 bunnies.")); //['I', 'have', 'dogs', 'cats', 'and', 'bunnies']
+// console.log(matchAllWords("123")); //[]
 
 //QUESTION 13:
 const replaceAllNumbers = (str) => {
