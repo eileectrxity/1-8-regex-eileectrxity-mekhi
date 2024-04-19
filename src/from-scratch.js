@@ -129,7 +129,7 @@ const isValidPhoneNumber = (str) => {
 //QUESTION 10: matchAllNumbers takes in a string and should return an array of all the numbers in the string (as strings). if there are no numbers, it should return an empty array. hint: what does match return if it finds no matches? what do we want it to return? RegEx can't do everything for us, don't forget your other JS tricks!
 const matchAllNumbers = (str) => {
   const digitRegex = str.match(/\d+/g) || [];
-  return digitRegex // could also do ternary --> ? digitRegex : []
+  return digitRegex; // could also do ternary --> ? digitRegex : []
 };
 
 // //printing q10 test to the console below
@@ -165,7 +165,15 @@ const matchAllWords = (str) => {
 // console.log(matchAllWords("I have 3 dogs, 2 cats, and 10 bunnies.")); //['I', 'have', 'dogs', 'cats', 'and', 'bunnies']
 // console.log(matchAllWords("123")); //[]
 
-const replaceAllNumbers = (str) => {};
+//QUESTION 13:
+const replaceAllNumbers = (str) => {
+  return str.replaceAll(/\d+/g, "???");
+};
+
+// //printing q13 test to the console below
+// replaceAllNumbers("My favorite number is 12."); // 'My favorite number is ???.'
+// replaceAllNumbers("I have no favorite number."); // 'I have no favorite number.'
+// replaceAllNumbers("There were 40 fire drills last year, and luckily 0 fires"); // 'There were ??? fire drills last year, and luckily ??? fires'
 
 const fixFileName = (str) => {};
 
