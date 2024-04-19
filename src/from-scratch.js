@@ -1,6 +1,6 @@
 //Lesson 1-8 Assignment: RegEx by Mekhi[odd q's] + Eileen[even q's]
 
-//for question s1-9, we'll use regex literals and the .test method
+//for question s1-9: we'll use regex literals and the .test method
 
 //QUESTION 1:
 const helloWorldRegex = (str) => {
@@ -27,7 +27,7 @@ const hasAVowel = (str) => {
 
 //QUESTION 3:
 const hasCatsOrDogs = (str) => {
-  return /(cat|dog)/.test(str);
+  return /(cats|dogs)/i.test(str);
 };
 
 // //printing q3 test to the console below
@@ -124,7 +124,19 @@ const isValidPhoneNumber = (str) => {
 // console.log(isValidPhoneNumber('8602277898')); //false
 // console.log(isValidPhoneNumber('ohmannotevenclosehere')); //false
 
-const matchAllNumbers = (str) => {};
+//question 10-12: for these next few questions, we're going to be focusing on the new .match string method. check out the docs if you're unfamiliar with the method. all questions will still be in the from-scratch.js file. remember, with matches, we usually want all of the matches, not just the first, what RegEx flag lets us do that?
+
+//QUESTION 10: matchAllNumbers takes in a string and should return an array of all the numbers in the string (as strings). if there are no numbers, it should return an empty array. hint: what does match return if it finds no matches? what do we want it to return? RegEx can't do everything for us, don't forget your other JS tricks!
+const matchAllNumbers = (str) => {
+  const digitRegex = str.match(/\d+/g) || [];
+  return digitRegex // could also do ternary --> ? digitRegex : []
+};
+
+// //printing q10 test to the console below
+// console.log(matchAllNumbers("My favorite number is 12.")); //['12']
+// console.log(matchAllNumbers("I have no favorite number.")); //[]
+// console.log(matchAllNumbers("There were 40 fire drills last year, and luckily 0 fires")); //['40', '0']
+// console.log(matchAllNumbers("I have 1 dog, 2 cats, and 4 bunnies. Oh wait, 8 bunnies.")); //['1', '2', '4', '8']
 
 const matchAllNumbersAsNumbers = (str) => {
   const digitRegex = /\d+/g;
