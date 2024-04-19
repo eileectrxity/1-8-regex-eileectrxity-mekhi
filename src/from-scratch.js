@@ -126,7 +126,26 @@ const isValidPhoneNumber = (str) => {
 
 const matchAllNumbers = (str) => {};
 
-const matchAllNumbersAsNumbers = (str) => {};
+const matchAllNumbersAsNumbers = (str) => {
+  const digitRegex = /\d+/g;
+  const digits = str.match(digitRegex) || [];
+  return digits.map((x) => Number(x));
+};
+
+// tests
+
+console.log(matchAllNumbersAsNumbers("My favorite number is 12.")); // [12]
+console.log(matchAllNumbersAsNumbers("I have no favorite number.")); // []
+console.log(
+  matchAllNumbersAsNumbers(
+    "There were 40 fire drills last year, and luckily 0 fires"
+  )
+); // [40, 0]
+console.log(
+  matchAllNumbersAsNumbers(
+    "I have 1 dog, 2 cats, and 4 bunnies. Oh wait, 8 bunnies."
+  )
+); // [1, 2, 4, 8]
 
 const matchAllWords = (str) => {};
 
