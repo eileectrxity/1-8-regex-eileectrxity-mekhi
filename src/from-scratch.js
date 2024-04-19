@@ -192,7 +192,9 @@ const fixFileName = (str) => {
 // console.log(fixFileName('first hw-trial spring')); //'first_hw-trial_spring'
 // console.log(fixFileName('assignment-12')); //'assignment-12'
 
-const nameRedacter = (str) => {};
+const nameRedacter = (str) => {
+  return str.replaceAll(/[A-Z]{2,}/g, "REDACTED");
+};
 
 const camelToSnakeCase = (str) => {};
 
