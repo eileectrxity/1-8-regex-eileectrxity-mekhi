@@ -177,7 +177,9 @@ const replaceAllNumbers = (str) => {
 
 const fixFileName = (str) => {};
 
-const nameRedacter = (str) => {};
+const nameRedacter = (str) => {
+  return str.replaceAll(/[A-Z]{2,}/g, "REDACTED");
+};
 
 const camelToSnakeCase = (str) => {};
 
