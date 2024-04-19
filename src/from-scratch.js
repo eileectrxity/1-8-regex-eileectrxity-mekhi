@@ -129,7 +129,7 @@ const isValidPhoneNumber = (str) => {
 //QUESTION 10: matchAllNumbers takes in a string and should return an array of all the numbers in the string (as strings). if there are no numbers, it should return an empty array. hint: what does match return if it finds no matches? what do we want it to return? RegEx can't do everything for us, don't forget your other JS tricks!
 const matchAllNumbers = (str) => {
   const digitRegex = str.match(/\d+/g) || [];
-  return digitRegex // could also do ternary --> ? digitRegex : []
+  return digitRegex; // could also do ternary --> ? digitRegex : []
 };
 
 // //printing q10 test to the console below
@@ -138,30 +138,30 @@ const matchAllNumbers = (str) => {
 // console.log(matchAllNumbers("There were 40 fire drills last year, and luckily 0 fires")); //['40', '0']
 // console.log(matchAllNumbers("I have 1 dog, 2 cats, and 4 bunnies. Oh wait, 8 bunnies.")); //['1', '2', '4', '8']
 
+//QUESTION 11:
 const matchAllNumbersAsNumbers = (str) => {
   const digitRegex = /\d+/g;
   const digits = str.match(digitRegex) || [];
   return digits.map((x) => Number(x));
 };
 
-// tests
-
-console.log(matchAllNumbersAsNumbers("My favorite number is 12.")); // [12]
-console.log(matchAllNumbersAsNumbers("I have no favorite number.")); // []
-console.log(
-  matchAllNumbersAsNumbers(
-    "There were 40 fire drills last year, and luckily 0 fires"
-  )
-); // [40, 0]
-console.log(
-  matchAllNumbersAsNumbers(
-    "I have 1 dog, 2 cats, and 4 bunnies. Oh wait, 8 bunnies."
-  )
-); // [1, 2, 4, 8]
+// //printing q11 test to the console below
+// console.log(matchAllNumbersAsNumbers("My favorite number is 12.")); //[12]
+// console.log(matchAllNumbersAsNumbers("I have no favorite number.")); //[]
+// console.log(matchAllNumbersAsNumbers("There were 40 fire drills last year, and luckily 0 fires")); //[40, 0]
+// console.log(matchAllNumbersAsNumbers("I have 1 dog, 2 cats, and 4 bunnies. Oh wait, 8 bunnies.")); //[1, 2, 4, 8]
 
 const matchAllWords = (str) => {};
 
-const replaceAllNumbers = (str) => {};
+//QUESTION 13:
+const replaceAllNumbers = (str) => {
+  return str.replaceAll(/\d+/g, "???");
+};
+
+// //printing q13 test to the console below
+// replaceAllNumbers("My favorite number is 12."); // 'My favorite number is ???.'
+// replaceAllNumbers("I have no favorite number."); // 'I have no favorite number.'
+// replaceAllNumbers("There were 40 fire drills last year, and luckily 0 fires"); // 'There were ??? fire drills last year, and luckily ??? fires'
 
 const fixFileName = (str) => {};
 
