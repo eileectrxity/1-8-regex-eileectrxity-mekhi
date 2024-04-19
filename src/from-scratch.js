@@ -27,16 +27,16 @@ const hasAVowel = (str) => {
 
 //QUESTION 3:
 const hasCatsOrDogs = (str) => {
-  return /(cat|dog)/.test(str);
+  return /(cats|dogs)/i.test(str);
 };
 
 // //printing q3 test to the console below
-// console.log(hasCatsOrDogs("Gosh, I love having so many cats!")); //true
-// console.log(hasCatsOrDogs("Wow, I have a lot of dogs!")); //true
-// console.log(hasCatsOrDogs("Cats rule!")); //true
-// console.log(hasCatsOrDogs("I do not care for that dog.")); //false
-// console.log(hasCatsOrDogs("Cat? No way.")); //false
-// console.log(hasCatsOrDogs("Cat? No, but I have a ton of dogs.")); //true
+// console.log(hasCatsOrDogs("Gosh, I love having so many cats!")); // true
+// console.log(hasCatsOrDogs("Wow, I have a lot of dogs!")); // true
+// console.log(hasCatsOrDogs("Cats rule!")); // true
+// console.log(hasCatsOrDogs("I do not care for that dog.")); // false
+// console.log(hasCatsOrDogs("Cat? No way.")); // false
+// console.log(hasCatsOrDogs("Cat? No, but I have a ton of dogs.")); // true
 
 //QUESTION 4: hasVowelStart takes in a string and should return true if the string starts with a vowel, and false otherwise. the case doesn't matter
 const hasVowelStart = (str) => {
@@ -78,7 +78,21 @@ const hasNothingOrDigits = (str) => {
 // console.log(hasNothingOrDigits("123abc")); //false
 // console.log(hasNothingOrDigits("abc123")); //false
 
-const hasNoFlippers = (str) => {};
+//QUESTION 7:
+const hasNoFlippers = (str) => {
+  // return /^[^BCcDEHIKOoXxl]*$/.test(str); //have no clue why this works
+  return !/[BCcDEHIKOoXxl]/.test(str);
+};
+
+// //printing q7 test to the console below
+// console.log(hasNoFlippers("Z")); // true
+// console.log(hasNoFlippers("Zabdabbq")); // true
+// console.log(hasNoFlippers("")); // true
+// console.log(hasNoFlippers("abd")); // true
+// console.log(hasNoFlippers("B")); // false
+// console.log(hasNoFlippers("BC")); // false
+// console.log(hasNoFlippers("oao")); // false
+// console.log(hasNoFlippers("abdefo")); // false
 
 const isValidEmail = (str) => {};
 
