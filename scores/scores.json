@@ -49,13 +49,13 @@
     "From Scratch Tests": {
       "FrScTe1": 1,
       "FrScTe2": 1,
-      "FrScTe3": 1,
+      "FrScTe3": 0,
       "FrScTe4": 1,
       "FrScTe5": 1,
-      "FrScTe6": 0,
+      "FrScTe6": 1,
       "FrScTe7": 1,
-      "FrScTe8": 0,
-      "FrScTe9": 0,
+      "FrScTe8": 1,
+      "FrScTe9": 1,
       "FrScTe10": 0,
       "FrScTe11": 0,
       "FrScTe12": 0,
@@ -67,8 +67,8 @@
   },
   "humanReadable": {
     "Debug Tests": "0/1",
-    "finalTestScore": "FINAL SCORE: 6/18",
+    "finalTestScore": "FINAL SCORE: 8/18",
     "Modify Tests": "0/1",
-    "From Scratch Tests": "6/16"
+    "From Scratch Tests": "8/16"
   }
 }
