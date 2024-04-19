@@ -192,11 +192,30 @@ const fixFileName = (str) => {
 // console.log(fixFileName('first hw-trial spring')); //'first_hw-trial_spring'
 // console.log(fixFileName('assignment-12')); //'assignment-12'
 
+//QUESTION 15: nameRedacter takes in a string and should return a string with all the names replaced with "REDACTED". a name is a word that is in ALL capitals (but not "I" or "A"). if there are no names, it should return the original string. it should only redact the name, and nothing else
 const nameRedacter = (str) => {
   return str.replaceAll(/[A-Z]{2,}/g, "REDACTED");
 };
 
-const camelToSnakeCase = (str) => {};
+// //printing q15 test to the console below
+// console.log(nameRedacter('My name is ITZEL.')); //'My name is REDACTED.');
+// console.log(nameRedacter('A name is not something I have.')); //'A name is not something I have.');
+// console.log(nameRedacter("Today is MAYA's first day, ZO will help her out.")); //"Today is REDACTED's first day, REDACTED will help her out."
+
+
+//QUESTION 16: anyway, using that replacer function, fill in camelToSnakeCase. it takes in a camelCase string and should return a snake_case_string. meaning, replace all the capital letters with an underscore and lowercase letter. if there are no capital letters, it should return the original string
+const camelToSnakeCase = (str) => {
+  return str.replaceAll(/[A-Z]/g, (match) => `_${match.toLowerCase()}`);
+  // return str.replaceAll(/^$|\s+/g, "_") //first try
+};
+
+// //printing q16 test to the console below
+// console.log(camelToSnakeCase('helloWorld')); //'hello_world'
+// console.log(camelToSnakeCase('helloWorldHowAreYou')); //'hello_world_how_are_you'
+// console.log(camelToSnakeCase('hello_world')); //'hello_world'
+// console.log(camelToSnakeCase('do-not-touch-kebab-case')); //'do-not-touch-kebab-case'
+// console.log(camelToSnakeCase('hello')); //'hello'
+// console.log(camelToSnakeCase('')); //''
 
 module.exports = {
   helloWorldRegex,
