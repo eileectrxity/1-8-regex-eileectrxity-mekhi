@@ -175,7 +175,22 @@ const replaceAllNumbers = (str) => {
 // replaceAllNumbers("I have no favorite number."); // 'I have no favorite number.'
 // replaceAllNumbers("There were 40 fire drills last year, and luckily 0 fires"); // 'There were ??? fire drills last year, and luckily ??? fires'
 
-const fixFileName = (str) => {};
+//QUESTION 14: fixFileName takes in a string and should return a string with all spaces replaced with underscores. no matter how big the whitespace is, it should be replaced with a single underscore. if there are no spaces, it should return the original string
+const fixFileName = (str) => {
+  return str.replaceAll(/\s+/g, /\s/g.test(str) ? "_" : "");
+  // return str.replaceAll(/^$|\s+/g, "_") //first try
+};
+
+// //printing q14 test to the console below
+// console.log(fixFileName('')); //''
+// console.log(fixFileName(' ')); //'_'
+// console.log(fixFileName('\t')); //'_'
+// console.log(fixFileName('\n')); //'_'
+// console.log(fixFileName('hello world')); //'hello_world'
+// console.log(fixFileName('hello   world')); //'hello_world'
+// console.log(fixFileName(`hello world`)); //'hello_world'
+// console.log(fixFileName('first hw-trial spring')); //'first_hw-trial_spring'
+// console.log(fixFileName('assignment-12')); //'assignment-12'
 
 const nameRedacter = (str) => {};
 
